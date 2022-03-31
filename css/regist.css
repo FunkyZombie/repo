@@ -1,0 +1,33 @@
+.banner {
+    background: #F8F3F4;
+}
+
+.banner__wrp {
+    padding: 60px 0;
+}
+
+.banner__title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--pink-color);
+    text-transform: uppercase;
+}
+
+.registration {
+    min-height: 600px;
+    padding: 64px 0 0 0;
+}
+
+.registration__wrp {
+    display: flex;
+}
+
+.registration__form {
+    width: 360px;
+}
+
+.registration__loyalty {
+    margin: 0 0 0 64px
+}
