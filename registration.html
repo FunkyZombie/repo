@@ -95,11 +95,24 @@
             <div class="container registration__wrp">
                 <h2 class="visually-hidden">Registr Form</h2>
                 <div class="registration__form">
-                    <h3>Your Name</h3>
+                    <h3 class="registration__form-title">Your Name</h3>
                     <form action="#">
-                        <!--Здесь должна быть форма, но ее нет-->
+                        <input class="registration__form-area" type="text" name="firstUserName" placeholder="First Name">
+                        <input class="registration__form-area" type="text" name="lastUserName" placeholder="Last Name">
+                        <label for="male">
+                            <input class="registration__form-radio" type="radio" name="gender" id="male" value="male" checked>
+                            Male
+                        </label>
+                        <label for="famale">
+                            <input class="registration__form-radio" type="radio" name="gender" id="famale" value="famale">
+                            Famale
+                        </label>
+                        <h3 class="registration__form-title">Login details</h3>
+                        <input class="registration__form-area" type="email" placeholder="Email">
+                        <input class="registration__form-area" type="password" placeholder="Password">
+                        <p class="registration__form-text">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
+                        <input class="registration__form-button" type="submit" value="join now">
                     </form>
-                    <p class="registration__form-text">Please use 8 or more characters, with at least 1 number and a mixture of uppercase and lowercase letters</p>
                 </div>
                 <div class="registration__loyalty">
                     <h3 class="registration__loyalty-title">loyalty has its perks</h3>
@@ -128,8 +141,9 @@
                     <p class="subscribe__form-text">for our newletter and promotion</p>
                     <div class="subscribe__form-email">
                         <form action="#">
+                            <label for="email" class="visually-hidden">email</label>
                             <input class="subscribe__form-area" type="email" placeholder="Enter Your Email">
-                            <label for="email"><input class="subscribe__form-button" type="submit" value="Subscribe"></label>
+                            <input class="subscribe__form-button" type="submit" value="Subscribe">
                         </form>
                     </div>
                 </div>
