@@ -76,6 +76,158 @@ body {
     fill: var(--pink-color);
 }
 
+/* BURGER MENU */
+
+.header__nav-closed {
+    width: 15px;
+    height: 15px;
+    margin: 0 0 10px 200px;
+}
+
+.nav-closed-button {
+    background-color: transparent;
+    border: none;
+    fill: #6F6E6E;
+    cursor: pointer;
+}
+
+.nav-closed-button:hover {
+    fill: var(--pink-color);
+}
+
+.burger {
+    position: relative;
+    width: 35px;
+    height: 24px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--icon-color);
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.burger:hover > .burger__line,
+.burger:hover::after,
+.burger:hover::before {
+    content: "";
+    background-color: var(--pink-color);
+}
+
+.burger::after,
+.burger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--icon-color);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.burger::before {
+    top: 0;
+}
+
+.burger::after {
+    bottom: 0;
+}
+
+.burger--active .burger__line {
+    opacity: 0;
+}
+
+.burger--active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    background-color: var(--pink-color);
+}
+
+.burger--active::after {
+    bottom: auto;
+    top: 50%;
+    transform: rotate(-45deg);
+    background-color: var(--pink-color);
+}
+
+.header__nav {
+    display: none;
+    position: absolute;
+    padding: 16px 0 0 33px;
+    right: 0;
+    top: 76px;
+    background-color: var(--white-color);
+    z-index: 1000;
+    width: 232px;
+    min-height: 700px;
+    transition: .6s ease-in-out;
+    overflow-y: auto;
+    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.nav--visible {
+    display: block;
+}
+
+.header__nav-title {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.header__nav-item {
+    margin: 24px 0 0 0;
+}
+
+.nav-item__title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--pink-color);
+}
+
+.nav-item__list {
+    margin: 12px 0 0 21px;
+}
+
+.nav-item__item {
+    margin: 0 0 11px 0;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+
+.nav__item-link {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    text-decoration: none;
+}
+
+.nav__item-link:hover {
+    color: var(--pink-color);
+}
+
 /* BRAND */
 
 .brand {
@@ -90,7 +242,7 @@ body {
 .brand__title-wrp {
     flex-grow: 1;
     background-color: var(--pink-bkg);
-    padding: 0 0 0 92px;
+    padding: 0 0 0 64px;
     display: flex;
     align-items: center;
 }
@@ -100,6 +252,8 @@ body {
     font-size: 48px;
     line-height: 58px;
     text-transform: uppercase;
+    border-left: 12px solid var(--pink-color);
+    padding-left: 16px;
 }
 
 .brand__title-lower {
@@ -250,7 +404,7 @@ body {
 }
 
 .product__item::before {
-    content: ' ';
+    content: '';
     background: rgba(58, 56, 56, 0.86);
     width: 100%;
     min-height: 420px;
@@ -273,6 +427,19 @@ body {
 .product__item:hover::before,
 .product__item:hover > .product__item-button {
     display: flex;
+}
+
+.product__item-button:hover {
+    border: 1.5px solid var(--pink-color);
+    color: var(--pink-color);
+}
+
+.product__item-button:hover .product__item-icon {
+    fill:var(--pink-color);
+}
+
+.product__item-button:hover .prodict__item-button-text {
+    color: var(--pink-color);
 }
 
 .product__item-icon {
@@ -515,4 +682,161 @@ body {
 
 .social__item:hover .social__item-image {
     fill: var(--white-color);
+}
+
+/* registration page */
+
+.banner {
+    background: #F8F3F4;
+}
+
+.banner__wrp {
+    padding: 60px 0;
+}
+
+.banner__title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--pink-color);
+    text-transform: uppercase;
+}
+
+.registration {
+    min-height: 600px;
+    padding: 64px 0 0 0;
+}
+
+.registration__wrp {
+    display: flex;
+}
+
+.registration__form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration__form-title {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 20px 0;
+}
+
+.registration__form-area {
+    border-radius: 0;
+    border: 1px solid #A4A4A4;
+    width: 360px;
+    height: 45px;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 10px;
+    box-sizing: border-box;
+}
+
+.registration__form-area:focus {
+    outline: none;
+    border: 1px solid var(--pink-color);
+}
+
+.registration__form-radio {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+    margin: 0 10px 0 0;
+}
+
+.registration__form .radio-label {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 20px 33px 0;
+}
+
+.registration__form-text {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+}
+
+.registration__form-button {
+    background-color: transparent;
+    padding: 14px 38px;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--link-color);
+    border: 1px solid var(--pink-color);
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 39px 0 0 0;
+    cursor: pointer;
+}
+
+.registration__form-button:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    background: url(../image/svg/arrow.svg) no-repeat;
+    background-size: 15px 15px;
+}
+
+.registration__form-button:hover {
+    background-color: var(--pink-color);
+    color: var(--white-color);
+}
+
+.registration__loyalty {
+    margin: 0 0 0 128px;
+}
+
+.registration__loyalty-title {
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--card-color);
+    text-transform: uppercase;
+    margin: 0 0 22px 0;
+}
+
+.registration__loyalty-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 21px 0;
+}
+
+.registration__loyalty-item {
+    position: relative;
+    margin: 0 0 16px 45px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.registration__loyalty-item:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 7px;
+    left: -45px;
+    background: url(../image/svg/marker.svg) no-repeat;
+    background-size: 18px 18px;
 }
