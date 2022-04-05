@@ -1,0 +1,36 @@
+.brand {
+    display: flex;
+}
+
+.brand__img {
+    width: 800px;
+    height: 765px;
+}
+
+.brand__title-wrp {
+    flex-grow: 1;
+    background-color: $pink-bkg;
+    padding: 0 0 0 64px;
+    display: flex;
+    align-items: center;
+}
+
+.brand__title {
+    font-family: 'Lato';
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+    border-left: 12px solid $pink-color;
+    padding-left: 16px;
+}
+
+.brand__title-lower {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    display: block;
+}
+
+.brand__title-pink {
+    color: $pink-color;
+}
