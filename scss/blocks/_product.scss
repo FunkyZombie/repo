@@ -1,0 +1,167 @@
+.product {
+    margin: 67px 0 0 0;
+}
+
+.product__title {
+    margin: 6px 0 0 0;
+    text-align: center;
+}
+
+.product__sub-title {
+    text-align: center;
+}
+
+.product__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 48px 0 0 0;
+}
+
+.product__item {
+    height: 581px;
+    width: 360px;
+    background-color: $product-bkg;
+    margin: 0 0 30px 0;
+    position: relative;
+}
+
+.product__title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: $product-title;
+}
+
+.product__sub-title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $sub-title;
+    margin-top: 6px;
+}
+
+.product-wrp {
+    margin: 24px 28px 0 16px;
+}
+
+.product__item-title {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: $card-color;
+    text-transform: uppercase;
+}
+
+.product__item-description {
+    margin: 12px 0 0 0;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-descript;
+}
+
+.product__item-price {
+    margin: 17px 0 0 0;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $pink-color;
+}
+
+.product__item::before {
+    content: '';
+    background: rgba(58, 56, 56, 0.86);
+    width: 100%;
+    min-height: 420px;
+    position: absolute;
+    display: none;
+}
+
+.product__item-button {
+    padding: 7px 15px;
+    background: transparent;
+    border: 1.5px solid $white-color;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 74px);
+    bottom: calc(62% - 23px);
+    cursor: pointer;
+    display: none;
+}
+
+.product__item:hover::before,
+.product__item:hover > .product__item-button {
+    display: flex;
+}
+
+.product__item-button:hover {
+    border: 1.5px solid $pink-color;
+    color: $pink-color;
+}
+
+.product__item-button:hover .product__item-icon {
+    fill: $pink-color;
+}
+
+.product__item-button:hover .prodict__item-button-text {
+    color: $pink-color;
+}
+
+.product__item-button:active {
+    background-color: $pink-color;
+}
+
+.product__item-button:active .prodict__item-button-text,
+.product__item-button:active .product__item-icon {
+    fill: $white-color;
+    color: $white-color;
+}
+
+.product__item-icon {
+    margin: 0 15px 0 0;
+    width: 32px;
+    height: 32px;
+    fill: $white-color;
+}
+
+.prodict__item-button-text {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white-color;
+}
+
+.product__all-range {
+    width: 100%; 
+    text-align: center;
+    margin: 19px 0 0 0;
+}
+
+.product__range-link {
+    padding: 14px 38px;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    color: $link-color;
+    border: 1px solid $pink-color;
+    display: inline-block;
+}
+
+.product__range-link:hover {
+    color: $white-color;
+    background-color: $pink-color;
+}
+
+.product__range-link:active {
+    color: $white-color ;
+    background-color: $pink-color + #222;
+    border: 1px solid $pink-color + #222;
+}
