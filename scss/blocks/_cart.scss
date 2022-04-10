@@ -42,7 +42,8 @@
         font-size: 13px;
         line-height: 13px;
         text-transform: uppercase;
-        color: $color-descript; 
+        color: $color-descript;
+        cursor: pointer;
         &:hover {
             border: 1px solid $pink-color;
             color: $pink-color;
@@ -53,3 +54,4 @@
         }
     }
 }
+
