@@ -1,55 +1,60 @@
 .sales {
     margin: 63px 0 0 0;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        height: 260px;
+        width: 360px;
+        background-color: $sales-bkg;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &--women {
+            background-image: url(../image/product-woman01.jpg);
+        }
+
+        &--man {
+            background-image: url(../image/product-man02.jpg);
+        }
+
+        &--kids {
+            background-image: url(../image/product-kids03.jpg);
+        }
+
+        &--shoes {
+            width: 100%;
+            height: 180px;
+            background-image: url(../image/product-accesories04.jpg);
+        }
+
+        &-text {
+            font-family: 'Lato';
+            font-weight: 400;
+            font-size: 16px;
+            color: $white-color;
+            text-transform: uppercase;
+        }
+    }
+
+    &__title {
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 24px;
+        color: $pink-color;
+        text-transform: uppercase;
+        margin-top: 6px;
+    }
 }
 
-.sales__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
-.sales__item {
-    height: 260px;
-    width: 360px;
-    background-color: $sales-bkg;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
 
-.sales__item--women {
-    background-image: url(../image/product-woman01.jpg);
-}
 
-.sales__item--man {
-    background-image: url(../image/product-man02.jpg);
-}
 
-.sales__item--kids {
-    background-image: url(../image/product-kids03.jpg);
-}
-
-.sales__item--shoes {
-    width: 100%;
-    height: 180px;
-    background-image: url(../image/product-accesories04.jpg);
-}
-
-.sales__item-text {
-    font-family: 'Lato';
-    font-weight: 400;
-    font-size: 16px;
-    color: $white-color;
-    text-transform: uppercase;
-}
-
-.sales__title {
-    font-family: 'Lato';
-    font-weight: 700;
-    font-size: 24px;
-    color: $pink-color;
-    text-transform: uppercase;
-    margin-top: 6px;
-}
