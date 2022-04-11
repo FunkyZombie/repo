@@ -18,20 +18,6 @@
         align-items: center;
     }
     
-    &__search-button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    
-    &__search-icon {
-        fill: $white-color;
-    }
-    
-    &__search-button:hover &__search-icon{
-        fill: $pink-color;
-    }
-    
     &__menu-list {
         display: flex;
     }
@@ -43,6 +29,7 @@
     &__person-icon,
     &__basket-icon {
         fill: $white-color;
+        transition: .2s ease-in-out;
     }
     
     &__menu-link:hover &__person-icon {

@@ -1,55 +1,74 @@
 .social {
     background-color: $black-bkg;
+
+    &__copyright-text {
+        font-family: 'Lato';
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+
+    &__wrp {
+        min-height: 79px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0 8px 0 0;
+        background-color: $white-color;
+        transition: .2s ease-in-out;
+
+        &-link {
+            display: flex;
+            width: 34px;
+            height: 34px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-image {
+            fill: $card-color;
+            transition: .2s ease-in-out;
+        }
+        &:hover {
+            background-color: $pink-color;
+        }
+
+        &:hover .social__item-image {
+            fill: $white-color;
+        }
+
+        &:active {
+            background-color: $pink-color + #222;
+        }
+
+        &:active .social__item-image {
+            fill: $white-color + #222;
+        }
+    }
 }
 
-.social__copyright-text {
-    font-family: 'Lato';
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FBFBFB;
-}
 
-.social__wrp {
-    min-height: 79px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.social__list {
-    display: flex;
-}
 
-.social__item {
-    margin: 0 8px 0 0;
-    background-color: $white-color;
-}
 
-.social__item-link {
-    display: flex;
-    width: 34px;
-    height: 34px;
-    justify-content: center;
-    align-items: center;
-}
 
-.social__item-image {
-    fill: $card-color;
-}
 
-.social__item:hover {
-    background-color: $pink-color;
-}
 
-.social__item:hover .social__item-image {
-    fill: $white-color;
-}
 
-.social__item:active {
-    background-color: $pink-color + #222;
-}
 
-.social__item:active .social__item-image {
-    fill: $white-color + #222;
-}
+
+
+
+
+
+
+
+
