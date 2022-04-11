@@ -1,15 +1,18 @@
 @import './variables';
 @import './reset';
 @import './general';
+@import './mixin';
 
 @import './blocks/header';
+@import './blocks/search';
 @import './blocks/nav-item';
+@import './blocks/burger';
 @import './blocks/banner';
-@import './blocks//registr';
+@import './blocks/registr';
 @import './blocks/brand';
 @import './blocks/sales';
 @import './blocks/product';
 @import './blocks/advantages';
 @import './blocks/subscribe';
 @import './blocks/social';
-@import './blocks/basket/cart';
+@import './blocks/cart';
