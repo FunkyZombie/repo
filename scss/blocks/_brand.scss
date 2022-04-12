@@ -1,8 +1,10 @@
 .brand {
     display: flex;
+    width: 100%;
+
     &__img {
-        width: 800px;
-        height: 765px;
+        width: 50%;
+        max-width: 800px;
     }
     
     &__title-wrp {
@@ -34,4 +36,43 @@
     }
 }
 
+@media (max-width: $desktop-mid-width) {
+    .brand__img {
+        width: 50%;
+    }
 
+    .brand__title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .brand__title-lower {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+
+    .brand__title-wrp {
+        padding: 0 0 0 30px;
+    }
+
+    .brand__title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .brand__title-lower {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: $mobile-mid-width) {
+    .brand {
+        height: 363px;
+    }
+
+    .brand__img {
+        display: none;
+    }
+}

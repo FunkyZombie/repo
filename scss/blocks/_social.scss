@@ -55,9 +55,12 @@
     }
 }
 
-
-
-
+@media (max-width: 425px) {
+    .social__wrp {
+        flex-direction: column-reverse;
+        padding: 43px 0 9px 0;
+    }
+}
 
 
 

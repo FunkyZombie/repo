@@ -30,7 +30,7 @@
     }
 
     &__form {
-        width: 557px;
+        max-width: 557px;
         height: auto;
         text-align: center;
         &-title {
@@ -48,7 +48,7 @@
             text-transform: uppercase;
         }
         &-email {
-            width: 349.5px;
+            max-width: 349.5px;
             height: 49px;
             border-radius: 25px;
             display: flex;
@@ -106,7 +106,15 @@
     } 
 }
 
+@media (max-width: $tablet-width) {
+    .subscribe__wrp {
+        flex-direction: column;
+    }
 
+    .subscribe__review {
+        margin-bottom: 48px;
+    }
+}
 
 
 
