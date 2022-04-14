@@ -79,9 +79,13 @@
 }
 
 @media (max-width: $tablet-width) {
+    .sales {
+        padding: 0;
+    }
+
     .sales__item {
-        width: 31.579%;
-        height: 180px;
+        width: 232.5px;
+        height: 167px;
         margin-bottom: 20px;
     }
 

@@ -49,3 +49,14 @@
         fill: $pink-color + #222;
     }
 }
+
+@media (max-width: $mobile-mid-width) {
+    .header__box {
+        padding: 0 10px;
+    }
+
+    .header__menu-person,
+    .header__menu-basket {
+        display: none;
+    }
+}
