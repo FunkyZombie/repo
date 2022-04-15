@@ -26,18 +26,43 @@
     }
 
     &__list {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 48px 0 0 0;
+        align-items: center;
     }
 
     &__item {
-        height: 581px;
-        width: 360px;
+        max-height: 581px;
+        max-width: 360px;
         background-color: $product-bkg;
+        padding: 0 0 20px 0;
         margin: 0 0 30px 0;
         position: relative;
+
+        &-block {
+            position: relative;
+
+            &::before {
+                content: ' ';
+                background: rgba(58, 56, 56, 0.86);
+                width: 100%;
+                height: 100%;
+                z-index: 8;
+                position: absolute;
+                display: none;
+            }
+
+            .product__item:hover &::before {
+                display: flex;
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
 
         &-title {
             font-family: 'Lato';
@@ -66,15 +91,6 @@
             color: $pink-color;
         }
 
-        &::before {
-            content: '';
-            background: rgba(58, 56, 56, 0.86);
-            width: 100%;
-            min-height: 420px;
-            position: absolute;
-            display: none;
-        }
-
         &-icon {
             margin: 0 15px 0 0;
             width: 32px;
@@ -94,6 +110,7 @@
             cursor: pointer;
             display: none;
             transition: .2s ease-in-out;
+            z-index: 9;
 
             &:hover {
                 border: 1.5px solid $pink-color;
@@ -128,7 +145,6 @@
             }
         }
 
-        &:hover::before,
         &:hover > .product__item-button {
             display: flex;
         }
@@ -164,7 +180,50 @@
     }
 }
 
+@media (max-width: $desktop-mid-width) {
+    .product {
+        padding: 0 10px;
+    }
 
+    .product__item {
+        width: 31.579%;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .product {
+        padding: 0;
+    }
+
+    .product__item {
+        width: 360px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product {
+        padding: 0;
+    }
+
+    .product__item {
+        width: 360px;
+    }
+
+    .product__list {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media  (width: $mobile-mid-width) {
+    .product {
+        padding: 0;
+    }
+    
+    .product__list {
+        justify-content: center;
+    }
+}
 
 
 
