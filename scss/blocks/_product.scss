@@ -200,7 +200,22 @@
     }
 }
 
-@media (max-width: $mobile-mid-width) {
+@media (max-width: 767px) {
+    .product {
+        padding: 0;
+    }
+
+    .product__item {
+        width: 360px;
+    }
+
+    .product__list {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media  (width: $mobile-mid-width) {
     .product {
         padding: 0;
     }
