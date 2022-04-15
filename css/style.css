@@ -745,6 +745,29 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .sales__item {
+    width: 343px;
+    height: 248px;
+  }
+  .sales__item--shoes {
+    width: 343px;
+    height: 111px;
+  }
+  .sales__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .sales {
+    padding: 0;
+  }
+}
+
 @media (max-width: 425px) {
   .sales__item {
     width: 343px;
@@ -985,7 +1008,25 @@ body {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) {
+  .product {
+    padding: 0;
+  }
+  .product__item {
+    width: 360px;
+  }
+  .product__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (width: 425px) {
   .product {
     padding: 0;
   }
