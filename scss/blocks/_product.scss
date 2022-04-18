@@ -71,6 +71,12 @@
             line-height: 16px;
             color: $card-color;
             text-transform: uppercase;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: $link-color;
+            }
         }
 
         &-description {

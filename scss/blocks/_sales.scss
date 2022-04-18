@@ -19,28 +19,24 @@
 
         &--women {
             background-image: url(../image/product-woman01.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            object-fit: cover;
         }
 
         &--man {
             background-image: url(../image/product-man02.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            object-fit: cover;
         }
 
         &--kids {
             background-image: url(../image/product-kids03.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            object-fit: cover;
         }
 
         &--shoes {
             width: 100%;
             height: 180px;
             background-image: url(../image/product-accesories04.jpg);
-            background-repeat: no-repeat;
-            background-size:cover;
+            object-fit: cover;
         }
 
         &-text {
