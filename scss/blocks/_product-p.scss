@@ -199,10 +199,11 @@
         height: 539px;
         
         &-block {
+            z-index: 1000;
             width: 100%;
             height: 601px;
             position: absolute;
-            top: -64px;
+            margin: -64px 0 0 0;
             background-color: $white-color;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
@@ -270,27 +271,12 @@
             margin: 64px 0 0 0;
         }
 
-        &-recomented {
+        &-recomended {
             margin: 128px auto;
         }
 
-        &-list {
-            margin: 64px 0 0 0;
-            display: flex;
-        }
-
-        &-item {
-            margin: 0 11px;
-            font-family: 'Lato';
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 17px;
-            color: #6F6E6E;
-            text-transform: uppercase;
-        }
-        &-item svg {
-            fill: #6F6E6E;
-            margin: 0 0 2px 5px;
+        &-icon {
+            transition: .2s ease-in-out;
         }
 
         &-button {
@@ -303,15 +289,42 @@
             transition: .2s ease-in-out;
             fill: #6F6E6E;
             display: flex;
+            outline: none;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 border: 1.5px solid $pink-color;
                 color: $pink-color;
             }
 
-            &:hover {
+            &:hover,
+            &:focus {
                 border: 1.5px solid $pink-color;
                 color: $pink-color;
+                
+            }
+
+            &:hover .slider__collection-button-text,
+            &:focus .slider__collection-button-text {
+                color: $pink-color;
+            }
+
+            &:hover .slider__collection-icon,
+            &:focus .slider__collection-icon {
+                fill: $pink-color;
+            }
+
+            &:active {
+                background-color: $pink-color;
+                
+            }
+
+            &:active .slider__collection-button-text {
+                color: $white-color;
+            }
+
+            &:active .slider__collection-icon {
+                fill: $white-color;
             }
 
             &-text {

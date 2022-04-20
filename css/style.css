@@ -85,6 +85,38 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/lato-light.woff2) format("woff2"), url(../fonts/lato-light.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/lato-italic.woff2) format("woff2"), url(../fonts/lato-italic.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/lato-regular.woff2) format("woff2"), url(../fonts/lato-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/lato-bold.woff2) format("woff2"), url(../fonts/lato-bold.woff) format("woff");
+}
+
 .header {
   background: #222224;
   width: 100%;
@@ -2063,10 +2095,11 @@ body {
 }
 
 .slider__collection-block {
+  z-index: 1000;
   width: 100%;
   height: 601px;
   position: absolute;
-  top: -64px;
+  margin: -64px 0 0 0;
   background-color: #FFF;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -2141,30 +2174,13 @@ body {
   margin: 64px 0 0 0;
 }
 
-.slider__collection-recomented {
+.slider__collection-recomended {
   margin: 128px auto;
 }
 
-.slider__collection-list {
-  margin: 64px 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.slider__collection-item {
-  margin: 0 11px;
-  font-family: 'Lato';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #6F6E6E;
-  text-transform: uppercase;
-}
-
-.slider__collection-item svg {
-  fill: #6F6E6E;
-  margin: 0 0 2px 5px;
+.slider__collection-icon {
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .slider__collection-button {
@@ -2182,16 +2198,39 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  outline: none;
 }
 
-.slider__collection-button:hover {
+.slider__collection-button:hover, .slider__collection-button:focus {
   border: 1.5px solid #F16D7F;
   color: #F16D7F;
 }
 
-.slider__collection-button:hover {
+.slider__collection-button:hover, .slider__collection-button:focus {
   border: 1.5px solid #F16D7F;
   color: #F16D7F;
+}
+
+.slider__collection-button:hover .slider__collection-button-text,
+.slider__collection-button:focus .slider__collection-button-text {
+  color: #F16D7F;
+}
+
+.slider__collection-button:hover .slider__collection-icon,
+.slider__collection-button:focus .slider__collection-icon {
+  fill: #F16D7F;
+}
+
+.slider__collection-button:active {
+  background-color: #F16D7F;
+}
+
+.slider__collection-button:active .slider__collection-button-text {
+  color: #FFF;
+}
+
+.slider__collection-button:active .slider__collection-icon {
+  fill: #FFF;
 }
 
 .slider__collection-button-text {
@@ -2203,5 +2242,55 @@ body {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   margin: 0 0 0 15px;
+}
+
+.slider__collection-list {
+  margin: 64px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider__collection-item svg {
+  fill: #6F6E6E;
+  margin: 0 0 2px 5px;
+}
+
+.slider__collection-select {
+  margin-left: 15px;
+  padding-right: 20px;
+  border: none;
+  min-width: 128px;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: right;
+  background-image: url(../image/svg/arrow-d.svg);
+  background-repeat: no-repeat;
+  background-position-x: 99%;
+  background-position-y: 47%;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+.slider__collection-select::-ms-expand {
+  /* IE */
+  display: none;
+}
+
+.slider__collection-select:hover, .slider__collection-select:focus {
+  outline: none;
+  border: none;
+  color: #F16D7F;
+}
+
+.slider__collection-select-option {
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
