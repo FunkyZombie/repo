@@ -37,11 +37,14 @@
             fill: $card-color;
             transition: .2s ease-in-out;
         }
-        &:hover {
+
+        &:hover,
+        &:focus {
             background-color: $pink-color;
         }
 
-        &:hover .social__item-image {
+        &:hover .social__item-image,
+        &:focus .social__item-image {
             fill: $white-color;
         }
 
