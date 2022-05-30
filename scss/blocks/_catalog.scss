@@ -13,6 +13,7 @@
         grid-template-columns: 31.6% 31.6% 31.6%;
         grid-template-rows: none;
         grid-auto-rows: auto;
+        position: relative;
 
         &-item {
             max-height: 584px;
